@@ -9,7 +9,7 @@ steer_channel=12
 throttle_channel=15
 
 
-def drive_with_cmd(throttle,steer,pwm):
+def drive_with_cmd(throttle,steer):
     throttle_pulse_width=fix(2.048*throttle+614.6)
     steer_pulse_width=fix(2.048*steer+614.6)                                                    
     pwm.set_pwm(throttle_channel,0, throttle_pulse_width) 
