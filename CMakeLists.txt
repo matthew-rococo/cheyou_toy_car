@@ -199,3 +199,8 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(teleop_toy_car_key src/teleop_toy_car_key.cpp)
+target_link_libraries(teleop_toy_car_key ${catkin_LIBRARIES})
+add_dependencies(teleop_toy_car_key cheyou_toy_car_generate_messages_cpp)
+
